@@ -11,7 +11,7 @@
 	<jsp:setProperty property="*" name="book"/>
 	
 	<%
-		session.setAttribute("book", book);
+		application.setAttribute("book", book);
 	%>
 	
 	<jsp:forward page="bookOutput.jsp" />
