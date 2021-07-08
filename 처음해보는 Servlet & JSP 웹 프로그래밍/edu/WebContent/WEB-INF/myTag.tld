@@ -7,5 +7,6 @@
   <tag>
     <name>first</name>
     <tag-class>com.edu.customTag.MyCustomTag</tag-class>
+    <body-content>empty</body-content>
   </tag>
 </taglib>
