@@ -9,6 +9,7 @@
 </head>
 <body>
 	<my2:second> hello~ </my2:second>
+	<my2:third>hello~</my2:third>
 	<br> Custom Tag Test!
 </body>
 </html>
