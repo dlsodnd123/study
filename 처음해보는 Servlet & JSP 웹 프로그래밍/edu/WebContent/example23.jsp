@@ -8,6 +8,6 @@
 <title>Custom Tag</title>
 </head>
 <body>
-<my:first/>
+<my:first> <%=1+2 %> </my:first>
 </body>
 </html>
