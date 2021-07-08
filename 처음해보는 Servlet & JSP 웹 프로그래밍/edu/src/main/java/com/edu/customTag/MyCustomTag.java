@@ -9,7 +9,7 @@ public class MyCustomTag extends TagSupport {
 	@Override
 	public int doStartTag() throws JspException {
 		System.out.println("시작태그를 만났습니다.");
-		return EVAL_BODY_INCLUDE;
+		return SKIP_BODY;	// SKIP_BODY는 태그의 몸체를 처리하지 않고 스킵
 	}
 	
 	@Override
