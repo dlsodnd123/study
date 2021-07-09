@@ -9,6 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<my:sum num2="12" num1="34"/>
+	<my:sum num1="12" num2="34"/>
+	덧셈 결과 : ${result}
 </body>
 </html>
