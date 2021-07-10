@@ -8,6 +8,12 @@ public class BookBean {
 	public BookBean() {
 	}
 	
+	public BookBean(String titel, String author, String publisher) {
+		this.title = titel;
+		this.author =author;
+		this.publisher = publisher;
+	}
+	
 	public String getTitle() {
 		return title;
 	}
