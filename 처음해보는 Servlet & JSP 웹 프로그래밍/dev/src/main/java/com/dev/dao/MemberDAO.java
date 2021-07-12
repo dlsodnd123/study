@@ -64,6 +64,7 @@ public class MemberDAO {
 			close(conn, pstmt);
 		}
 	}
+<<<<<<< HEAD
 	
 	public MemberVo memberSearch(String id) {
 		Connection conn = null;
@@ -128,4 +129,6 @@ public class MemberDAO {
 			close(conn, pstmt);
 		}
 	}
+=======
+>>>>>>> master
 }

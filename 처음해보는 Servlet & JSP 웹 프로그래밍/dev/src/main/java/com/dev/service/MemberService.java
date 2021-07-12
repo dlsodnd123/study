@@ -17,6 +17,7 @@ public class MemberService {
 		dao.memberInsert(member);
 	}
 	
+<<<<<<< HEAD
 	public MemberVo memberSearch(String id) {
 		MemberVo member = dao.memberSearch(id);
 		return member;
@@ -30,4 +31,6 @@ public class MemberService {
 		dao.memberDelete(id);
 	}
 	
+=======
+>>>>>>> master
 }
