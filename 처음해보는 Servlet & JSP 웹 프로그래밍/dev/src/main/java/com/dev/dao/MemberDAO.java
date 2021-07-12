@@ -64,4 +64,32 @@ public class MemberDAO {
 			close(conn, pstmt);
 		}
 	}
+	
+	public MemberVo memberSearch(String id) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		MemberVo member = null;
+		
+		try {
+			conn = connect();
+			pstmt = conn.prepareStatement("select * from member where id=?");
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			if (rs.next()) {
+				member = new MemberVo();
+				member.setId(id);
+				member.setPasswd(rs.getString(2));
+				member.setName(rs.getString(3));
+				member.setMail(rs.getString(4));
+			}
+		} catch (Exception ex) {
+			System.out.println("오류 발생 : " + ex);
+		} finally {
+			close(conn, pstmt, rs);
+		}
+		
+		return member;
+	}
 }
