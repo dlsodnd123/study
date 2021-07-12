@@ -22,4 +22,8 @@ public class MemberService {
 		return member;
 	}
 	
+	public void memberUpdate(MemberVo member) {
+		dao.memberUpdate(member);
+	}
+	
 }

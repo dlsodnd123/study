@@ -92,4 +92,24 @@ public class MemberDAO {
 		
 		return member;
 	}
+	
+	public void memberUpdate(MemberVo member) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			conn = connect();
+			pstmt = conn.prepareStatement("upate member set passwd=?, name=?, mail=? where id=?");
+			pstmt.setString(1, member.getPasswd());
+			pstmt.setString(2, member.getName());
+			pstmt.setString(3, member.getMail());
+			pstmt.setString(4, member.getId());
+			pstmt.executeUpdate();
+			
+		} catch (Exception ex) {
+			System.out.println("오류 발생 : " + ex);
+		} finally {
+			close(conn, pstmt);
+		}
+	}
 }
