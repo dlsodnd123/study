@@ -27,7 +27,6 @@
 				E-Mail : <input type="text" name="mail" value="${member.mail}"/> <br>
 				<input type="submit" value="수정"/>
 			</form>
-		}
 	<% } else { %>
 		${result} <p>
 	<% } %>

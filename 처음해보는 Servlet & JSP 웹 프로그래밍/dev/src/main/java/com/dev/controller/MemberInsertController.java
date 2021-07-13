@@ -38,7 +38,7 @@ public class MemberInsertController implements Controller{
 		
 		// Output View 페이지로 이동
 		request.setAttribute("id", id);
-		HttpUtil.forward(request, reponse, "/result/memberInsertOutput");
+		HttpUtil.forward(request, reponse, "/result/memberInsertOutput.jsp");
 	}
 
 }

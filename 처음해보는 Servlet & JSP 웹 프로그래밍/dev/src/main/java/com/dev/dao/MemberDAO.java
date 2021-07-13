@@ -20,7 +20,7 @@ public class MemberDAO {
 		Connection conn = null;
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xw", "scott", "tiger");
+			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "scott", "tiger");
 		} catch (Exception ex) {
 			System.out.println("오류 발생 : " + ex);
 		}
@@ -100,7 +100,7 @@ public class MemberDAO {
 		
 		try {
 			conn = connect();
-			pstmt = conn.prepareStatement("upate member set passwd=?, name=?, mail=? where id=?");
+			pstmt = conn.prepareStatement("update member set passwd=?, name=?, mail=? where id=?");
 			pstmt.setString(1, member.getPasswd());
 			pstmt.setString(2, member.getName());
 			pstmt.setString(3, member.getMail());
@@ -120,7 +120,7 @@ public class MemberDAO {
 		
 		try {
 			conn = connect();
-			pstmt = conn.prepareStatement("delete form member where id=?");
+			pstmt = conn.prepareStatement("delete from member where id=?");
 			pstmt.setString(1, id);
 			pstmt.executeUpdate();
 		} catch (Exception ex) {
