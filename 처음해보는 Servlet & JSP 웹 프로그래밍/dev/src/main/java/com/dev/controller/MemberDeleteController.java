@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.dev.service.MemberService;
 
-public class MemeberDeleteController implements Controller{
+public class MemberDeleteController implements Controller{
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, IOException {
