@@ -1,5 +1,7 @@
 package com.dev.service;
 
+import java.util.ArrayList;
+
 import com.dev.dao.MemberDAO;
 import com.dev.vo.MemberVo;
 
@@ -17,7 +19,6 @@ public class MemberService {
 		dao.memberInsert(member);
 	}
 	
-<<<<<<< HEAD
 	public MemberVo memberSearch(String id) {
 		MemberVo member = dao.memberSearch(id);
 		return member;
@@ -31,6 +32,9 @@ public class MemberService {
 		dao.memberDelete(id);
 	}
 	
-=======
->>>>>>> master
+	public ArrayList<MemberVo> memberList() {
+		ArrayList<MemberVo> list = dao.memberList();
+		return list;
+	}
+	
 }
